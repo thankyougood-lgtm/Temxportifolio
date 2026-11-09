@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temesgen Melkamu | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <nav class="nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#top" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="profile" aria-label="Profile picture">
+          <div class="profile-ring">
+            <button class="profile-upload-trigger" type="button" aria-label="Change profile photo">
+              <!-- Make sure you have an image at ./assets/profile-photo.jpg -->
+              <img id="profileImage" src="./assets/profile-photo.jpg" alt="Temesgen Melkamu profile photo" />
+            </button>
+          </div>
+          <input id="profileInput" type="file" accept="image/*" hidden />
+        </div>
+      </header>
+
+      <main class="hero" id="top">
+        <p class="eyebrow">Software Dev &amp; Full Stack Dev</p>
+
+        <h1 class="title-wrap" aria-label="Portfolio">
+          <span class="title">Portfolio</span>
+          <span class="gold-badge" aria-label="Premium portfolio award">
+            <span class="star">✦</span>
+          </span>
+        </h1>
+
+        <!-- Folder Animation Asset -->
+        <div class="asset-stage" aria-label="Dark smoked frosted glass folder asset">
+          <div class="folder-asset">
+            <div class="folder-back">
+              <div class="tab"></div>
+            </div>
+            <div class="folder-front">
+              <div class="front-edge"></div>
+            </div>
+            <div class="paper-stack" aria-hidden="true">
+              <span class="paper p1"></span>
+              <span class="paper p2"></span>
+              <span class="paper p3"></span>
+            </div>
+            <div class="folder-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- PROJECTS SECTION -->
+      <section class="content-area" id="projects" aria-label="Projects section">
+        <div class="section-header">
+          <p class="section-label">SELECTED WORK</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section class="content-area" id="about" aria-label="About Me">
+        <div class="section-header">
+          <p class="section-label">WHO I AM</p>
+          <h2>About Me</h2>
+        </div>
+        <div class="info-panel">
+          <p class="info-text">
+            I am a passionate Software Developer and Full Stack Developer. I specialize in building fast, responsive web applications and PWAs. I love solving problems and turning complex requirements into clean, user-friendly digital experiences.
+          </p>
+          <h3>My Tech Stack</h3>
+          <div class="project-meta">
+            <span>HTML</span> <span>CSS</span> <span>JavaScript</span> 
+            <span>Python</span> <span>Node.js</span> <span>React.js</span> 
+            <span>TypeScript</span> <span>Tailwind CSS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CV & CONTACT SECTION -->
+      <section class="content-area" id="contact" aria-label="Contact and Resume">
+        <div class="section-header">
+          <p class="section-label">GET IN TOUCH</p>
+          <h2>Contact &amp; Resume</h2>
+        </div>
+        
+        <div class="contact-grid">
+          <!-- CV Download Box -->
+          <div class="info-panel">
+            <h3>Resume</h3>
+            <p class="info-text" style="margin-bottom: 20px;">Download my full CV to see my experience and education.</p>
+            <!-- MAKE SURE YOUR PDF IS NAMED Temesgen_CV.pdf AND IS IN THE assets FOLDER -->
+            <a href="./assets/TemesgenCV.pdf" download class="cv-button" style="text-decoration: none; display: inline-block;">
+              📄 Download My CV
+            </a>
+          </div>
+
+          <!-- Contact Links Box -->
+          <div class="info-panel">
+            <h3>Let's Connect</h3>
+            <p class="info-text" style="margin-bottom: 20px;">I am currently available for freelance work and open to new opportunities.</p>
+            
+            <a href="mailto:your-email@gmail.com" class="contact-link">
+              📧 temtysson@gmail.com
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+              💻 github.com/thankyougood-lgtm
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+              🔗 linkedin.com/in/yourusername
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span class="name">Temesgen Melkamu</span>
+        <span class="year">2026</span>
+      </footer>
+    </div>
+
+    <!-- LINK TO JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+  </body>
+</html>
