@@ -3,136 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temesgen Melkamu — Software Developer and Full Stack Developer. Projects, about, contact, and resume." />
+    <meta name="theme-color" content="#02040a" />
     <title>Temesgen Melkamu | Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Great+Vibes&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <div class="page-shell">
       <header class="topbar">
         <nav class="nav" aria-label="Main navigation">
           <ul>
-            <li><a href="#top" class="active">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#top" class="active" aria-current="page" data-nav>Home</a></li>
+            <li><a href="#projects" data-nav>Projects</a></li>
+            <li><a href="#about" data-nav>About Me</a></li>
+            <li><a href="#contact" data-nav>Contact</a></li>
           </ul>
         </nav>
 
+        <!--
+          PROFILE IS STATIC / OWNER-ONLY.
+          To change it, replace the file: assets/profile-photo.jpg
+        -->
         <div class="profile" aria-label="Profile picture">
           <div class="profile-ring">
-            <button class="profile-upload-trigger" type="button" aria-label="Change profile photo">
-              <!-- Make sure you have an image at ./assets/profile-photo.jpg -->
-              <img id="profileImage" src="./assets/profile-photo.jpg" alt="Temesgen Melkamu profile photo" />
-            </button>
+            <img
+              src="./assets/profile-photo.jpg"
+              alt="Temesgen Melkamu"
+              width="150"
+              height="150"
+              decoding="async"
+              fetchpriority="high"
+            />
           </div>
-          <input id="profileInput" type="file" accept="image/*" hidden />
         </div>
       </header>
 
-      <main class="hero" id="top">
-        <p class="eyebrow">Software Dev &amp; Full Stack Dev</p>
+      <main id="main">
+        <section class="hero" id="top" aria-label="Introduction">
 
-        <h1 class="title-wrap" aria-label="Portfolio">
-          <span class="title">Portfolio</span>
-          <span class="gold-badge" aria-label="Premium portfolio award">
-            <span class="star">✦</span>
-          </span>
-        </h1>
+          <!-- BOUNCE LINE: "I'm Temesgen" -->
+           <h3><p class="bounce-line">
+            <span class="sr-only"> I'm </span>
+            <span class="bounce-visual" id="bounceLine" data-text="I'm " aria-hidden="true"></span>
+          </p></h3>
 
-        <!-- Folder Animation Asset -->
-        <div class="asset-stage" aria-label="Dark smoked frosted glass folder asset">
-          <div class="folder-asset">
-            <div class="folder-back">
-              <div class="tab"></div>
-            </div>
-            <div class="folder-front">
-              <div class="front-edge"></div>
-            </div>
-            <div class="paper-stack" aria-hidden="true">
-              <span class="paper p1"></span>
-              <span class="paper p2"></span>
-              <span class="paper p3"></span>
-            </div>
-            <div class="folder-glow" aria-hidden="true"></div>
-          </div>
-        </div>
-      </main>
+          <!-- BIG NAME: typewriter + parallax -->
+          <h1 class="title-wrap" aria-label="Temesgen">
+            <span class="title" id="heroTitle" aria-hidden="true">Temesgen.M</span>
+            <span class="gold-badge" aria-hidden="true">
+              <span class="star">✦</span>
+            </span>
+          </h1>
 
-      <!-- PROJECTS SECTION -->
-      <section class="content-area" id="projects" aria-label="Projects section">
-        <div class="section-header">
-          <p class="section-label">SELECTED WORK</p>
-          <h2>Projects</h2>
-        </div>
-
-        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
-      </section>
-
-      <!-- ABOUT ME SECTION -->
-      <section class="content-area" id="about" aria-label="About Me">
-        <div class="section-header">
-          <p class="section-label">WHO I AM</p>
-          <h2>About Me</h2>
-        </div>
-        <div class="info-panel">
-          <p class="info-text">
-            I am a passionate Software Developer and Full Stack Developer. I specialize in building fast, responsive web applications and PWAs. I love solving problems and turning complex requirements into clean, user-friendly digital experiences.
+          <!-- ROTATING ROLES: auto-typing -->
+          <p class="role-line">
+            <span class="sr-only">
+              I am a Full Stack Developer, Web Developer,
+              and Progressive Web App (PWA) Developer.
+            </span>
+            <span class="role-static" aria-hidden="true">I am a</span>
+            <span class="role-dynamic" id="roleTyped" aria-hidden="true"></span>
+            <span class="role-cursor" aria-hidden="true"></span>
           </p>
-          <h3>My Tech Stack</h3>
-          <div class="project-meta">
-            <span>HTML</span> <span>CSS</span> <span>JavaScript</span> 
-            <span>Python</span> <span>Node.js</span> <span>React.js</span> 
-            <span>TypeScript</span> <span>Tailwind CSS</span>
-          </div>
-        </div>
-      </section>
 
-      <!-- CV & CONTACT SECTION -->
-      <section class="content-area" id="contact" aria-label="Contact and Resume">
-        <div class="section-header">
-          <p class="section-label">GET IN TOUCH</p>
-          <h2>Contact &amp; Resume</h2>
-        </div>
-        
-        <div class="contact-grid">
-          <!-- CV Download Box -->
-          <div class="info-panel">
-            <h3>Resume</h3>
-            <p class="info-text" style="margin-bottom: 20px;">Download my full CV to see my experience and education.</p>
-            <!-- MAKE SURE YOUR PDF IS NAMED Temesgen_CV.pdf AND IS IN THE assets FOLDER -->
-            <a href="./assets/TemesgenCV.pdf" download class="cv-button" style="text-decoration: none; display: inline-block;">
-              📄 Download My CV
-            </a>
+          <!-- FOLDER ASSET -->
+          <div class="asset-stage" aria-label="Frosted glass folder animation">
+            <div class="folder-asset" role="img" aria-label="Frosted glass portfolio folder">
+              <div class="folder-back"><div class="tab"></div></div>
+              <div class="folder-front"><div class="front-edge"></div></div>
+              <div class="paper-stack" aria-hidden="true">
+                <span class="paper p1"></span>
+                <span class="paper p2"></span>
+                <span class="paper p3"></span>
+              </div>
+              <div class="folder-glow" aria-hidden="true"></div>
+            </div>
           </div>
+        </section>
 
-          <!-- Contact Links Box -->
-          <div class="info-panel">
-            <h3>Let's Connect</h3>
-            <p class="info-text" style="margin-bottom: 20px;">I am currently available for freelance work and open to new opportunities.</p>
-            
-            <a href="mailto:your-email@gmail.com" class="contact-link">
-              📧 temtysson@gmail.com
-            </a>
-            <a href="https://github.com/yourusername" target="_blank" class="contact-link">
-              💻 github.com/thankyougood-lgtm
-            </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
-              🔗 linkedin.com/in/yourusername
-            </a>
+        <section class="content-area" id="projects" aria-labelledby="projects-title">
+          <div class="section-header">
+            <p class="section-label">SELECTED WORK</p>
+            <h2 id="projects-title">Projects</h2>
           </div>
-        </div>
-      </section>
+          <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="content-area" id="about" aria-labelledby="about-title">
+          <div class="section-header">
+            <p class="section-label">WHO I AM</p>
+            <h2 id="about-title">About Me</h2>
+          </div>
+          <div class="info-panel">
+            <p class="info-text">
+              I am a passionate Software Developer and Full Stack Developer. I specialize in building fast, responsive web applications and PWAs. I love solving problems and turning complex requirements into clean, user-friendly digital experiences.
+            </p>
+            <h3>My Tech Stack</h3>
+            <div class="project-meta">
+              <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
+              <span>Python</span> <span>Node.js</span> <span>React.js</span>
+              <span>TypeScript</span> <span>Tailwind CSS</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-area" id="contact" aria-labelledby="contact-title">
+          <div class="section-header">
+            <p class="section-label">GET IN TOUCH</p>
+            <h2 id="contact-title">Contact &amp; Resume</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="info-panel">
+              <h3>Resume</h3>
+              <p class="info-text">Download my full CV to see my experience and education.</p>
+              <a href="./assets/TemesgenCV.pdf" download class="cv-button">📄 Download My CV</a>
+            </div>
+            <div class="info-panel">
+              <h3>Let's Connect</h3>
+              <p class="info-text">I am currently available for freelance work and open to new opportunities.</p>
+              <a href="mailto:temtysson@gmail.com" class="contact-link">📧 temtysson@gmail.com</a>
+              <a href="https://github.com/thankyougood-lgtm" target="_blank" rel="noopener noreferrer" class="contact-link">💻 github.com/thankyougood-lgtm</a>
+              <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="contact-link">🔗 linkedin.com/in/yourusername</a>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer class="footer">
         <span class="name">Temesgen Melkamu</span>
-        <span class="year">2026</span>
+        <span class="year" id="year">2026</span>
       </footer>
     </div>
 
-    <!-- LINK TO JAVASCRIPT FILE -->
     <script src="script.js"></script>
   </body>
 </html>
